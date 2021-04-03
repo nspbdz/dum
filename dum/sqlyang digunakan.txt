@@ -1,0 +1,24 @@
+Create table book_tb(
+     id varchar (100) NOT NULL,
+     name varchar (100),
+     category_id varchar (100),
+     writer_id varchar (100),
+     publication_year date,
+     img varchar (100),
+     PRIMARY KEY (id));
+
+Create table category_tb(
+     id varchar (100) NOT NULL,
+     name varchar (100),
+     PRIMARY KEY (id));
+Create table writer_tb(
+     id varchar (100) NOT NULL,
+     name varchar (100),
+     PRIMARY KEY (id));
+
+ INSERT INTO book_tb  VALUES  ('10','Angular','1','1', '2021-04-03','alfian.jpg')
+
+INSERT INTO category_tb VALUES ('10','Dart');
+INSERT INTO writer_tb VALUES ('10','mark');
+
+
