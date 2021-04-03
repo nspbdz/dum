@@ -1,0 +1,42 @@
+<!-- Var data = [1,2,1,3,2]
+Masukan tanggal lahir = 3
+
+
+Masukan bulan lahir = 2
+
+Result = 2 -->
+
+<script>
+var data = [1,2,1,3,2];
+tgl=3;
+bln=2;
+    var sorted = data.sort();
+    console.log(sorted);
+    document.write(sorted);
+
+    var nums = [1,2,1,3,2];
+
+    function permute(nums) {
+        var numsx = [1,2,1,3,2];
+        var nums =numsx.sort();
+        
+    let result = [];
+  if (nums.length === 0) return [];
+  if (nums.length === 1) return [nums];
+  for (let i = 0; i < nums.length; i++) {
+      const currentNum = nums[i];
+      const remainingNums = nums.slice(0, i).concat(nums.slice(i + 1));
+      const remainingNumsPermuted = permute(remainingNums);
+      for (let j = 0; j < remainingNumsPermuted.length; j++) {
+          const permutedArray =                                     
+          [currentNum].concat(remainingNumsPermuted[j]);
+          result.push(permutedArray);
+        }
+    }
+    return result;
+    console.log(result);
+    //   document.write(result);
+}
+permute(nums);
+
+</script>
